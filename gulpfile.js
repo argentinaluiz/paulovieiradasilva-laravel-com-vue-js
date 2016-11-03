@@ -39,7 +39,7 @@ gulp.task('webpack-dev-server', () => {
 		publicPath: config.output.publicPath,
 		noInfo: true,
 		stats: { colors: true }
-	}).listen(8080, "192.168.10.10", () => {
+	}).listen(8080, "0.0.0.0", () => {
 		console.log("Bundling project ...");
 	});
 });
