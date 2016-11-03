@@ -52,7 +52,7 @@ elixir(mix => {
     gulp.start('webpack-dev-server');
 
     mix.browserSync({
-    	host: 'localhost',
+    	host: '0.0.0.0',
     	proxy: 'http://192.168.10.10:8080'
     });
 });
