@@ -39,7 +39,7 @@ gulp.task('webpack-dev-server', () => {
 		publicPath: config.output.publicPath,
 		noInfo: true,
 		stats: { colors: true }
-	}).listen(8080, "0.0.0.0", () => {
+	}).listen(8080, "192.168.10.10", () => {
 		console.log("Bundling project ...");
 	});
 });
@@ -52,7 +52,7 @@ elixir(mix => {
     gulp.start('webpack-dev-server');
 
     mix.browserSync({
-    	host: '0.0.0.0',
+    	host: 'localhost',
     	proxy: 'http://192.168.10.10:8080'
     });
 });
